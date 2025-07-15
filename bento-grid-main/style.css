@@ -43,6 +43,36 @@ h3 {
 img {
   width: 100%;
 }
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+.flex-justify-between {
+  display: flex;
+  justify-content: space-between;
+}
 .cards {
   gap: 2rem;
   display: grid;
@@ -52,6 +82,10 @@ img {
     "create social social schedule"
     "write manage maintain schedule"
     "write growth followers followers ";
+}
+.card {
+  padding: 2rem;
+  gap: 1rem;
 }
 .card:nth-child(1) {
   grid-area: create;
@@ -67,21 +101,33 @@ img {
     /* font-size: var(--f-medium); */
     font-weight: var(--fw-large);
     border: none;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 }
 .card:nth-child(2) {
   grid-area: social;
   background-color: var(--Purple-500);
+  text-align: center;
   color: var(--White);
   & .yellow {
     color: var(--Yellow-500);
+  }
+  & img {
+    max-width: 30%;
   }
 }
 .card:nth-child(3) {
   grid-area: schedule;
   background-color: var(--Purple-100);
+  padding-right: 0;
+  font-weight: bold;
+  & img {
+    aspect-ratio: 0.7;
+    border-radius: 0;
+  }
 }
 .card:nth-child(4) {
   grid-area: write;
@@ -103,6 +149,9 @@ img {
   grid-area: followers;
   background-color: var(--Purple-500);
   color: var(--White);
+  & img {
+    width: 40%;
+  }
 }
 .card {
   border-radius: 15px;
